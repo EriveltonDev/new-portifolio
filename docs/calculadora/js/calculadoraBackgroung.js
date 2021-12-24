@@ -3,6 +3,7 @@ export default class calculadora {
     this.botoes = document.querySelectorAll(botoes);
     this.display = document.querySelector(display);
     this.botaoLimpar = document.querySelector(botaoLimpar);
+
     }
 
     puxarTexto(event) {
@@ -13,7 +14,13 @@ export default class calculadora {
         } else if (event.target.innerHTML === '=') {
             this.calcular();
         } else {
-            this.display.innerHTML += event.target.innerHTML;
+            const content = this.display.innerHTML;
+            if (content === '0') {
+                this.display.innerHTML = event.target.innerHTML; 
+            ;
+            } else {
+                this.display.innerHTML += event.target.innerHTML; 
+            }
         }
     }
 
@@ -46,12 +53,16 @@ export default class calculadora {
 
     backspace() {
         const conteudo = this.display.innerHTML;
+        if (conteudo.length != 1 ) {
         this.display.innerHTML = conteudo.substring(0, conteudo.length -1);
+        } else {
+            this.limpar();
+        }
         
     }
     
     limpar() {
-        this.display.innerHTML = "";
+        this.display.innerHTML = "0";
     }
     
 
