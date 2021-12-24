@@ -14,7 +14,6 @@ export default class buscaCEP {
         this.bai = document.querySelector('#bai');
         this.loc = document.querySelector('#loc');
         this.fu = document.querySelector('#fu');
-
     }
 
     atualizarCEP() {
@@ -43,8 +42,10 @@ export default class buscaCEP {
                     this.erro1.classList.remove('ativo');
                     this.puxarCEP(this.buscador.value)
                 } else {
+                    this.limparTela();
                     this.buscador.classList.add('ativo');
                     this.erro2.classList.add('ativo');
+                    this.limpar(this.section)
                     this.clear();
                 }
             }
@@ -57,12 +58,26 @@ export default class buscaCEP {
                 this.erro1.classList.remove('ativo');
                 this.puxarCEP(this.buscador.value)
             } else {
+                this.limparTela();
                 this.buscador.classList.add('ativo');
                 this.erro2.classList.add('ativo');
                 this.puxarCEP();
                 this.clear();
             }
         });
+    }
+
+    limparTela() {
+        this.logradouro.setAttribute('style', 'display:none;')
+            this.log.setAttribute('style', 'display:none;')
+            this.complemento.setAttribute('style', 'display:none;')
+            this.com.setAttribute('style', 'display:none;')
+            this.bairro.setAttribute('style', 'display:none;')
+            this.bai.setAttribute('style', 'display:none;')
+            this.localidade.setAttribute('style', 'display:none;')
+            this.loc.setAttribute('style', 'display:none;')
+            this.uf.setAttribute('style', 'display:none;')
+            this.fu.setAttribute('style', 'display:none;')
     }
 
     limpar(body) {
