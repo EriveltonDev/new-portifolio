@@ -188,6 +188,7 @@ nav a:hover {
     padding: 80px 25px;
     background-color: var(--main-color);
     border-radius: 10px;
+    max-width: 300px;
 }
 
 #titulo h1 span {
