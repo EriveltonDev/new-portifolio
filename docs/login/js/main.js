@@ -21,6 +21,7 @@ function guardarDados() {
             localStorage.setItem('formularios', JSON.stringify(formularios));
             msgError.setAttribute('style', 'visibility:hidden;');
             msgSucess.setAttribute('style', 'visibility: visible');
+            window.alert("CADASTRO EFETUADO COM SUCESSO!!");
             redirecionamento()
         } else {
             msgError.setAttribute('style', 'display:block');
@@ -36,6 +37,7 @@ function guardarDados() {
             localStorage.setItem('formularios', JSON.stringify(formularios));
             msgError.setAttribute('style', 'visibility:hidden;');
             msgSucess.setAttribute('style', 'visibility: visible');
+            window.alert("CADASTRO EFETUADO COM SUCESSO!!");
             redirecionamento()
         } else {
             msgError.setAttribute('style', 'display:block');
