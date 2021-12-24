@@ -1,5 +1,5 @@
 import buscaCEP from "./buscaFetch.js";
 
-const busca = new buscaCEP ('button', '#buscador', '#logradouro', '#complemento', '#bairro', '#localidade', '#uf');
+const busca = new buscaCEP ('a', '#buscador', '#logradouro', '#complemento', '#bairro', '#localidade', '#uf');
 
 busca.init();
