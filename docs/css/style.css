@@ -7,6 +7,10 @@
     text-decoration: none;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 :root {
     --main-color: #00031f;
     --verde:#00ad6b;
