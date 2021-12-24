@@ -122,7 +122,7 @@ nav a:hover {
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
-    flex-wrap: wrap;
+    align-items: center;
 }
 
 #hello {
@@ -134,6 +134,10 @@ nav a:hover {
 #descricao h1 {
     padding: 10px;
     color: white;
+}
+
+#descricao {
+    max-width: 40%;
 }
 
 #descricao h1 span {
@@ -260,6 +264,10 @@ nav a:hover {
         text-align: center;
     }
 
+    #descricao {
+        min-width: 80%;
+    }
+
     #apresentacao {
         margin-bottom: 40px;
     }
@@ -272,6 +280,8 @@ nav a:hover {
     #sobreMim {
         text-align: center;
         padding: 25px;
+        flex-wrap: wrap;
+        justify-content: center;
     }
 
     #projetosBackground {
