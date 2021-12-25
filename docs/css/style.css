@@ -157,6 +157,7 @@ nav a:hover {
 }
 
 #projetosBackground {
+    padding: 40px;
     height: 100vh;
     background-color: var(--second-color);
     display: flex;
@@ -256,6 +257,12 @@ nav a:hover {
     border: 1px solid white;
     border-radius: 10px;
     margin: 20px;
+}
+
+@media (max-width:1370px) {
+    #projetosBackground {
+        height: auto;
+    }
 }
 
 @media (max-width:700px) {
