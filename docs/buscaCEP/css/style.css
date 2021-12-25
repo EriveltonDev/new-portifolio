@@ -35,6 +35,11 @@ div {
     font-weight: bolder;
 }
 
+input:focus {
+    border: 0 none;
+    outline: 0;
+}
+
 label {
     cursor: pointer;
     display: none;
