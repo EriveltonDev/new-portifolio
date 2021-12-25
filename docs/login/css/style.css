@@ -1,110 +1,68 @@
 * {
-    margin: 0;
     padding: 0;
-    font-size: 15px;
-    font-weight: bolder;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
 }
 
 body {
-    font-weight: bolder;
-    color: white;
     font-family: sans-serif;
+    background-color: rgb(207, 207, 207);
     height: 100vh;
     width: 100vw;
     display: flex;
-    justify-content: center;
     align-items: center;
-    background-color: rgba(0, 0, 0,0.5);
+    justify-content: center;
 }
 
-.container {
+#container {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 20px;
-    background-color: black;
+    padding: 40px 80px;
+    background-color: rgb(9, 0, 48);
+    color: rgb(207, 207, 207);
     border-radius: 10px;
-}
-
-#usuario {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-
-#usuario input {
-    padding: 15px;
-    border-radius: 10px;
-    border: none;
-    margin: 10px;
-    max-width: 100%;
-}
-
-#pass {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-
-#pass input {
-    padding: 15px;
-    border-radius: 10px;
-    border: none;
-    margin: 10px;
-    max-width: 100%;
-    color: black;
-}
-
-#pass i {
-    position: absolute;
-    top: 50px;
-    right: 30px;
-    color: black;
-    cursor: pointer;
-}
-
-button {
-    border: none;
-    margin: 20px;
-    min-width: 92%;
-    padding: 15px;
-    border-radius: 10px;
-    cursor: pointer;
-    color: black;
+    
 }
 
 h1 {
+    margin-bottom: 10px;
+}
+
+input {
+    border-radius: 10px;
+    margin: 10px;
+    padding: 10px 20px;
+}
+
+input:focus {
+    border: 0 none;
+    outline: 0;
+}
+
+a {
+    margin: 20px;
+    display: block;
+    color: rgb(9, 0, 48);
+    padding: 10px 20px;
+    background-color: rgb(207, 207, 207);
+    border-radius: 10px;
+}
+
+.msgError {
+    display: none;
+    background-color: red;
+    padding: 5px;
+    margin: 15px;
+    border-radius: 5px;
+}
+
+.msgSucess {
+    display: none;
     background-color: green;
     padding: 5px;
-    margin: 5px;
-    border-radius: 10px;
-    visibility:hidden;
-}
-
-h2 {
-    display: none;
-    margin: 5px;
-    background-color:red ;
-    padding: 5px;
-    border-radius: 10px;
-}
-
-span {
-    background-color: transparent;
-    padding: 20px;
-    border: 10px solid black;
-    border-radius: 50%;
-    border-top-color: transparent;
-    animation: rotate 1s linear infinite;
-    display: none;
-}
-
-@keyframes rotate {
-    to {
-        transform: rotate(360deg);
-    }
+    margin: 15px;
+    border-radius: 5px;
 }

@@ -1,34 +1,26 @@
 const usuario = document.querySelector('#user');
-const senha = document.querySelector('#senha');
-const cadastrar = document.querySelector('#cadastrar');
-const olho = document.querySelector('#olho');
-const msgError = document.querySelector('h1');
-const container = document.querySelector('.container');
-const span = document.querySelector('span');
+const senha = document.querySelector('#password');
+const botao = document.querySelector('a');
+const msgError = document.querySelector('#msgError');
+const msgSucess = document.querySelector('#msgSucess');
 
-cadastrar.addEventListener('click', validar);
-olho.addEventListener('click' , mostrarSenha);
+botao.addEventListener('click', validacao);
 
-function validar() {
-    let formularios = JSON.parse(localStorage.getItem('formularios'));
-    formularios.forEach(item => {
-        if (item.usuario == usuario.value && item.senha == senha.value) {
-            container.setAttribute('style', 'display:none;');
-            span.setAttribute('style', 'display:block;');
-            setTimeout(() => {
-                window.location.href = "https://eriveltondev.github.io/portifolio-principal/"
-            }, 3000)
+
+let cadastro = JSON.parse(localStorage.getItem('cadastro'));
+
+console.log(cadastro);
+function validacao() {
+    cadastro.forEach(item => {
+        if(item.usuario === usuario.value && item.senha === senha.value) {
+        msgSucess.setAttribute('style', 'display:block;');
+        msgError.setAttribute('style', 'display:none;');
+        setTimeout(() => {
+            window.location.href = 'sucesso.html'
+        }, 2000);
         } else {
-            msgError.setAttribute('style', 'visibility:visible;')
+            msgError.setAttribute('style', 'display:block;');
+        msgSucess.setAttribute('style', 'display:none;');
         }
     });
-}
-
-
-function mostrarSenha() {
-    if (senha.type == 'password') {
-        senha.type = 'text';
-    } else {
-        senha.type = 'password'
-    }
 }
