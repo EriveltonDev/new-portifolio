@@ -6,6 +6,8 @@
 }
 
 body {
+    text-align: center;
+    padding: 40px;
     font-family: sans-serif;
     background-color: rgb(207, 207, 207);
     height: 100vh;
@@ -20,7 +22,7 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 40px 80px;
+    padding: 30px 50px;
     background-color: rgb(9, 0, 48);
     color: rgb(207, 207, 207);
     border-radius: 10px;

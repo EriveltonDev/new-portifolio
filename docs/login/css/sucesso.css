@@ -4,6 +4,7 @@
 }
 
 body {
+    text-align: center;
     font-family: sans-serif;
     background-color: rgb(3, 0, 31);
     height: 100vh;
@@ -12,4 +13,8 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+h1 {
+    padding: 40px;
 }
