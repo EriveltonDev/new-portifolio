@@ -385,11 +385,15 @@ nav a:hover {
 @media (max-width:500px) {
     .hamburguer {
         margin-right: 1.8rem;
+        font-size: 2rem;
     }
     #conteudo {
-        padding: 0px;
+        padding: 40px 0;
     }
     #sobreMimBackground {
         height: auto;
+    }
+    #logo {
+        font-size: 1.4rem;
     }
 }
