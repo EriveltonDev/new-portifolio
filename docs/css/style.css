@@ -384,7 +384,7 @@ nav a:hover {
 
 @media (max-width:500px) {
     .hamburguer {
-        margin-right: 1.8rem;
+        margin-right: 2.2rem;
         font-size: 2rem;
     }
     #conteudo {
