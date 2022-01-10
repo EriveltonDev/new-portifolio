@@ -396,4 +396,7 @@ nav a:hover {
     #logo {
         font-size: 1.4rem;
     }
+    #redes a {
+        text-align: center;
+    }
 }
