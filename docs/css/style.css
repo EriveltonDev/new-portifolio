@@ -274,6 +274,7 @@ nav a:hover {
         display: block;
         font-size: 35px;
         color: #b1b1b1;
+        transition: 0.5s;
     }
     .hamburguer.ativo {
         transform: rotate(90deg);
