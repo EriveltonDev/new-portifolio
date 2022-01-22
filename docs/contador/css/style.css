@@ -108,6 +108,11 @@ header.ativo {
     font-size: 4rem;
 }
 
+.container-requisicao h3 {
+    color: white;
+    padding-bottom: 15px;
+}
+
 .container-requisicao a {
     margin-top: 20px;
     display: block;
