@@ -129,3 +129,10 @@ header.ativo {
 #requisicao.ativo {
     display: none;
 }
+
+
+@media (max-width: 500px) {
+    .container-requisicao input, .container-requisicao a {
+        width: 300px;
+    }
+}
