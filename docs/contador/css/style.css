@@ -1,0 +1,126 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+body {
+    background-color: black;
+    font-family: sans-serif;
+    height: calc(100vh - 80px);
+    width: 100vw;
+}
+
+header {
+    display: none;
+}
+
+nav {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-around;
+}
+
+#logo {
+    color: #21EB00;
+    font-weight: bolder;
+    font-size: 2rem;
+}
+
+#reiniciar {
+    display: block;
+    background-color: #21EB00;
+    color: black;
+    padding: 10px 20px;
+    border-radius: 15px;
+    font-weight: bolder;
+    cursor: pointer;
+}
+
+#main {
+    display: none;
+}
+
+section {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+section > h1 {
+    color: white;
+    opacity: 0.1;
+    font-size: 3rem;
+    font-weight: 100;
+}
+
+.container div {
+    padding: 20px;
+    text-align: center;
+}
+
+.container h1 {
+    color: white;
+    font-size: 4rem;
+    font-weight: 100;
+}
+
+.container p {
+    color: #21EB00;
+}
+
+.container {
+    display: flex;
+}
+
+header.ativo {
+    display: block;
+}
+
+#main.ativo {
+    display: flex;
+}
+
+/* -------------- Tela de requisição ---------- */
+
+.container-requisicao {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+.container-requisicao input {
+    background-color: rgba(255, 255, 255, 0.3);
+    border: none;
+    padding: 10px;
+    width: 32vw;
+    border-radius: 15px;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.container-requisicao h1 {
+    color: #21EB00;
+    font-size: 4rem;
+}
+
+.container-requisicao a {
+    margin-top: 20px;
+    display: block;
+    background-color: #21EB00;
+    color: black;
+    padding: 10px 20px;
+    border-radius: 15px;
+    font-weight: bolder;
+    width: 32vw;
+    text-align: center;
+    cursor: pointer;
+}
+
+#requisicao.ativo {
+    display: none;
+}
