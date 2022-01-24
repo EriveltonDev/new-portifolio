@@ -6,21 +6,22 @@ const segundos = document.querySelector('.segundos h1');
 const formulario = document.querySelector('#formulario');
 const main = document.querySelector('#main');
 const requisicao = document.querySelector('#requisicao');
+const requisicaoErro = document.querySelector('#requisicao h3');
 const reiniciar = document.querySelector('#reiniciar');
 const header = document.querySelector('header');
-
 
 iniciar.addEventListener('click', pegarDados);
 
 function pegarDados() {
-    trocarTela()
-    const data = formulario.value;
-    const dia = data.slice(8,10);
-    const mes = data.slice(5,7);
-    const ano = data.slice(0,4);
-    setInterval(() => {
-        calcularDias(dia, mes, ano);
-    }, 1000)
+        requisicaoErro.classList.remove('ativo');
+        trocarTela()
+        const data = formulario.value;
+        const dia = data.slice(8,10);
+        const mes = data.slice(5,7);
+        const ano = data.slice(0,4);
+        setInterval(() => {
+            calcularDias(dia, mes, ano);
+        }, 1000)
 }
 
 reiniciar.addEventListener('click', retornar);
@@ -28,6 +29,12 @@ reiniciar.addEventListener('click', retornar);
 function retornar() {
     trocarTela()
     location.reload();
+}
+
+function retornarErro() {
+    trocarTela()
+    location.reload();
+    
 }
 
 function trocarTela() {
@@ -88,7 +95,9 @@ function calcularDias(dia, mes, ano) {
     const horasAgora = transformarHoras(data.getTime());
     const horasFuturo = transformarHoras(dataFuturo.getTime());
     const faltaHoras = Math.floor(horasFuturo - horasAgora);
-    console.log(faltaHoras);
+    if(faltaHoras < 0 ) {
+        retornarErro();
+    } 
     horas.innerHTML = faltaHoras % 24;
 
     const minutosAgora = transformarMinutos(data.getTime());
